@@ -1,7 +1,7 @@
-# Express API Project
-- Builds a CRUD API that connects to a Postgres Database
+# Express API
+- Builds a CRUD Restful API that connects to a Postgres Database
 - Domain: Users
-- ERD
+- Entity Relationship Diagram
 
 ## 1. Set up express app
 - `npm init`
@@ -62,3 +62,33 @@ const query = (queryText, queryParams) => {
     return pool.query(queryText, queryParams)
 }
 ```
+
+
+
+
+
+
+
+
+```json
+[
+  {
+    "id": 1,
+    "name": "Ann",
+    "email": "ann@gmail.com"
+  },
+  {
+    "id": 2,
+    "name": "Maya",
+    "email": "maya@gmail.com"  
+  }
+]
+```
+
+```json
+{
+  "id": 2,
+  "name": "Maya",
+  "email": "maya@gmail.com"  
+}
+``

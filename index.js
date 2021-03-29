@@ -1,11 +1,14 @@
 const express = require("express");
 const app = express();
+const PORT = process.env.PORT || 8000; 
 
-const PORT = process.env.PORT || 8000;
-
-app.use(express.urlencoded({extended: false}))
-app.use(express.json())
+console.log("What is process.env.PORT", process.env.PORT)
 
 app.listen(PORT, () => {console.log(`Server is running on ${PORT}`)})
 
-app.get('/', (req, res) => { res.status(200).json({message: "Hello world!"}) })
+app.use(express.urlencoded({extended: false})) //allows form requests
+app.use(express.json())                        //allows json requests
+
+app.get('/', (req, res) => { 
+  res.status(200).json({message: "Hello world!"}) 
+})

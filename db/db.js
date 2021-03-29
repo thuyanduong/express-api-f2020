@@ -19,4 +19,11 @@ const connectionProduction = {
 
 const pool = new Pool(process.env.NODE_ENV === 'production' ? connectionProduction : connectionLocal)
 
-module.exports = {pool}
+const query = (queryText, queryParams) => {
+  return pool.query(queryText, queryParams)
+}
+
+module.exports = {
+  pool,
+  query
+}

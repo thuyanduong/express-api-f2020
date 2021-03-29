@@ -57,12 +57,19 @@ app.get('/users', (req, res) => {
 ## 5. Abstraction and Classes
 * Create a generate query executer function
 * Create `models` folder with a User.js class
+* Extra practice: `async` and `await`
 
 ```js
 const query = (queryText, queryParams) => {
     return pool.query(queryText, queryParams)
 }
 ```
+
+## MVC Design
+- Models (how we model tables in javascript) {id: , name: email:}
+- Views (individual web pages)
+- Controllers (logic and business decisions)
+
 
 
 

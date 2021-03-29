@@ -38,6 +38,7 @@ const connectionProduction = {
 
 const isProduction = process.env.NODE_ENV === 'production'
 
+
 const pool = new Pool(isProduction ? connectionProduction : connectionLocal)
 
 module.exports = {pool}
@@ -91,4 +92,5 @@ const query = (queryText, queryParams) => {
   "name": "Maya",
   "email": "maya@gmail.com"  
 }
-``
+```
+SELECT id FROM users
